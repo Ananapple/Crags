@@ -3,10 +3,14 @@ require.config({
   },
 
   paths: {
+    //vendor
     jquery: 'vendor/jquery.min',
     lodash: '../components/lodash/lodash',
     handlebars: '../components/handlebars/handlebars',
-    text: '../components/text/text'
+    text: '../components/text/text',
+
+    //internal
+    component: 'ui-components/component'
   }
 });
  
