@@ -3,11 +3,13 @@ require.config({
   },
 
   paths: {
-    jquery: 'vendor/jquery.min'
+    jquery: 'vendor/jquery.min',
+    lodash: '../components/lodash/lodash',
+    handlebars: '../components/handlebars/handlebars',
+    text: '../components/text/text'
   }
 });
  
 require(['app'], function(app) {
-  // use app here
-  console.log(app);
+    console.log("app started...");
 });
