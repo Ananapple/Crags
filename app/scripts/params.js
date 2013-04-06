@@ -14,7 +14,7 @@ define([
         'appName': 'Crags',
 
         'api': {
-            'crag': 'http://api.crags.app:8888/index.php/v1/crag'
+            'crag': 'http://mikkelstaff.net/api/v1/crag'
         }
 
     };

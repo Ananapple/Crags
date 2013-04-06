@@ -3,17 +3,20 @@ define([
   'app',
   'collections/cragSet',
   'models/crag',
-  'viewModels/cragOverviewView'
+  'viewModels/cragOverviewView',
+  'models/route',
+  'models/routeStats'
 ],
 
-function(app, CragSet, Crag, CragOverviewView) {
+function(app, CragSet, Crag, CragOverviewView, Route, RouteStats) {
 
   // Defining the application router, you can attach sub routers here.
   var Router = Backbone.Router.extend({
     
     routes: {
       '': 'indexAction',
-      'crags/:id': 'cragAction'
+      'crags/:id': 'cragAction',
+      'stats/:id': 'statsAction'
     },
 
     indexAction: function() {
@@ -28,11 +31,21 @@ function(app, CragSet, Crag, CragOverviewView) {
         crag.fetch({
             success: function () {
                 var cragOverviewView = CragOverviewView.create(crag);
-                cragOverviewView.render()
+                cragOverviewView.render();
                 $('#main').html(cragOverviewView.el);
+
+                var routeStats = RouteStats.create();
+                var cragOverviewStatsView = CragOverviewStatsView.create(routeStats);
+                cragOverviewStatsView.render();
+                $('#stats').html(cragOverviewStatsView.el);
+                cragOverviewStatsView.displayStats();
             }
         });
     },
+
+    statsAction: function(id){
+      Route.calculateStats(id);
+    }
 
   });
 
