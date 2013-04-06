@@ -56,9 +56,15 @@ function(app, CragSet, Crag, CragOverviewView, Route, RouteStats, CragOverviewSt
         mapLayout.render().then(function () {
             $('#map-container').html(mapLayout.el);
             mapLayout.drawMap();
-            cragListView.render().then(function () {
-                $('#craglist').html(cragListView.el);
-            });
+            console.log(cragSet);
+            cragSet.fetch();
+            // cragSet.fetch({
+            //     success: function () {
+            //         // cragListView.render().then(function () {
+            //         //     $('#craglist').html(cragListView.el);
+            //         // });
+            //     }
+            // });
         });
     }
 
