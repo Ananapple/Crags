@@ -37,9 +37,11 @@ function(app, CragSet, Crag, CragOverviewView, Route, RouteStats, CragOverviewSt
 
                 var routeStats = RouteStats.create();
                 var cragOverviewStatsView = CragOverviewStatsView.create(routeStats);
-                cragOverviewStatsView.render();
-                $('#main').append(cragOverviewStatsView.el);
-                cragOverviewStatsView.displayStats();
+                cragOverviewStatsView.render().then(function () {
+                    $('#main').append(cragOverviewStatsView.el);
+                    cragOverviewStatsView.displayStats();    
+                });
+                
             }
         });
     },
