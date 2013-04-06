@@ -1,6 +1,6 @@
 .DS_Store
-temp
-dist
+./temp
+./dist
 .gitattributes
 .gitignore
 .jshintrc
