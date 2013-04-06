@@ -33,13 +33,13 @@ function(app, CragSet, Crag, CragOverviewView, Route, RouteStats, CragOverviewSt
             success: function () {
                 var cragOverviewView = CragOverviewView.create(crag);
                 cragOverviewView.render();
-                $('#main').html(cragOverviewView.el);
+                $('#main  ').html(cragOverviewView.el);
 
                 var routeStats = RouteStats.create();
                 var cragOverviewStatsView = CragOverviewStatsView.create(routeStats);
                 cragOverviewStatsView.render().then(function () {
                     $('#main').append(cragOverviewStatsView.el);
-                    cragOverviewStatsView.displayStats();    
+                    cragOverviewStatsView.displayStats(id);    
                 });
                 
             }
