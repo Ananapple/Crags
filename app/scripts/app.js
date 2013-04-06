@@ -3,10 +3,12 @@ define([
   "jquery",
   "lodash",
   "backbone",
-  '../components/handlebars/handlebars',
+  "leaflet",
+  'handlebars',
 
   // Plugins.
   "plugins/backbone.layoutmanager"
+
   ],
 
   function($, _, Backbone) {
