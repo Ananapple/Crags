@@ -15,10 +15,7 @@ define([
 
     spec.model = Crag;
 
-    spec.url = function () {
-        var api = params('api');
-        return api.base + '/' + api.crags;
-    };
+    spec.url = params('api').crag;
 
     var CragSet = Backbone.Collection.extend(spec);
 

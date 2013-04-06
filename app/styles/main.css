@@ -1,6 +1,7 @@
 @import "h5bp.css";
 @import "components.css";
 @import "overview.css";
+@import "../components/leaflet/dist/leaflet.css";
 
 /* Will be compiled down to a single stylesheet with your sass files */
 
@@ -12,4 +13,33 @@
 @font-face {
     font-family: LaneNarrow;
     src: url("../fonts/lanenar.ttf") format("truetype");
+}
+
+#map {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0px;
+}
+#map-header {
+    height:50px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+}
+.right {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: 100%;
+    height: 100%;
+}
+.left-swipe {
+    width: 200px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }

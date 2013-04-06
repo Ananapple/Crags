@@ -6,10 +6,12 @@ define([
   'viewModels/cragOverviewView',
   'models/route',
   'models/routeStats',
-  'viewModels/cragOverviewStatsView'
+  'viewModels/cragOverviewStatsView',
+  'viewModels/mapLayoutView',
+  'viewModels/cragListView'
 ],
 
-function(app, CragSet, Crag, CragOverviewView, Route, RouteStats, CragOverviewStatsView) {
+function(app, CragSet, Crag, CragOverviewView, Route, RouteStats, CragOverviewStatsView, MapLayoutView, CragListView) {
 
   // Defining the application router, you can attach sub routers here.
   var Router = Backbone.Router.extend({
@@ -17,7 +19,8 @@ function(app, CragSet, Crag, CragOverviewView, Route, RouteStats, CragOverviewSt
     routes: {
       '': 'indexAction',
       'crags/:id': 'cragAction',
-      'stats/:id': 'statsAction'
+      'stats/:id': 'statsAction',
+      'map': 'map'
     },
 
     indexAction: function() {
@@ -32,22 +35,31 @@ function(app, CragSet, Crag, CragOverviewView, Route, RouteStats, CragOverviewSt
         crag.fetch({
             success: function () {
                 var cragOverviewView = CragOverviewView.create(crag);
-                cragOverviewView.render();
-                $('#main  ').html(cragOverviewView.el);
-
-                var routeStats = RouteStats.create();
-                var cragOverviewStatsView = CragOverviewStatsView.create(routeStats);
-                cragOverviewStatsView.render().then(function () {
-                    $('#main').append(cragOverviewStatsView.el);
-                    cragOverviewStatsView.displayStats(id);    
+                cragOverviewView.render().then(function () {
+                    $('#main').html(cragOverviewView.el);
+                    var routeStats = RouteStats.create();
+                    var cragOverviewStatsView = CragOverviewStatsView.create(routeStats);
+                    cragOverviewStatsView.render().then(function () {
+                        $('#stats').html(cragOverviewStatsView.el);
+                        cragOverviewStatsView.displayStats();    
+                    });
                 });
-                
             }
         });
     },
 
-    statsAction: function(id){
-      Route.calculateStats(id);
+    map: function () {
+
+        var cragSet = CragSet.create();
+        var mapLayout = MapLayoutView.create();
+        var cragListView = CragListView.create(cragSet);
+        mapLayout.render().then(function () {
+            $('#map-container').html(mapLayout.el);
+            mapLayout.drawMap();
+            cragListView.render().then(function () {
+                $('#craglist').html(cragListView.el);
+            });
+        });
     }
 
   });

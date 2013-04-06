@@ -13,7 +13,8 @@ require.config({
     jquery: "../scripts/libs/jquery",
     lodash: "../scripts/libs/lodash",
     backbone: "../scripts/libs/backbone",
-    handlebars: "../components/handlebars/handlebars"
+    handlebars: "../components/handlebars/handlebars",
+    leaflet: "../components/leaflet/dist/leaflet"
   },
 
   shim: {
@@ -23,8 +24,13 @@ require.config({
       exports: "Backbone"
     },
 
+    leaflet: {
+        exports: "L"
+    },
+
     // Backbone.LayoutManager depends on Backbone.
-    "plugins/backbone.layoutmanager": ["backbone"]
+    "plugins/backbone.layoutmanager": ["backbone"]//,
+    // "../components/leaflet/dist/leaflet/leafletembed": ["leaflet"]
   }
 
 });
