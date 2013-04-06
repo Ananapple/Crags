@@ -40,7 +40,9 @@ define([
         });
     }
 
-    _this.getData = function () {
+    var spec = {}; 
+
+    spec.getData = function () {
         return{
         labels : ["January","February","March","April","May","June","July"],
         datasets : [
@@ -69,5 +71,12 @@ define([
     }
 
     };    
+
+    var RouteStats = Backbone.Model.extend(spec);
+    
+    _this.create = function () {
+        return new RouteStats();
+    };
+
     return _this;
 });

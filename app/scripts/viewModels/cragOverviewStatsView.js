@@ -12,11 +12,11 @@ define([
 
     var spec = {};
 
-    spec.template = 'crags/overview';
+    spec.template = 'crags/overviewStats';
     spec.manage = true;
 
     spec.serialize = function () {
-        return '';
+        return {} ;
     };
 
     spec.displayStats = function () {

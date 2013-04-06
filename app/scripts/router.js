@@ -5,10 +5,11 @@ define([
   'models/crag',
   'viewModels/cragOverviewView',
   'models/route',
-  'models/routeStats'
+  'models/routeStats',
+  'viewModels/cragOverviewStatsView'
 ],
 
-function(app, CragSet, Crag, CragOverviewView, Route, RouteStats) {
+function(app, CragSet, Crag, CragOverviewView, Route, RouteStats, CragOverviewStatsView) {
 
   // Defining the application router, you can attach sub routers here.
   var Router = Backbone.Router.extend({
@@ -37,7 +38,7 @@ function(app, CragSet, Crag, CragOverviewView, Route, RouteStats) {
                 var routeStats = RouteStats.create();
                 var cragOverviewStatsView = CragOverviewStatsView.create(routeStats);
                 cragOverviewStatsView.render();
-                $('#stats').html(cragOverviewStatsView.el);
+                $('#main').append(cragOverviewStatsView.el);
                 cragOverviewStatsView.displayStats();
             }
         });
