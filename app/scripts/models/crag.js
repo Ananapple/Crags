@@ -15,6 +15,10 @@ define([
 
     spec.idAttribute = 'cragId';
 
+    spec.getImageURL = function () {
+        return params('cragImage')+this.get('cragImage');
+    }
+
     var Crag = Backbone.Model.extend(spec);
 
     _this.create = function (id) {

@@ -12,7 +12,7 @@ define([
 
         'baseUrl': 'localhost:3501',
         'appName': 'Crags',
-
+        'cragImage': 'http://mikkelstaff.net/api/images/',
         'api': {
             'crag': 'http://mikkelstaff.net/api/v1/crag'
         }

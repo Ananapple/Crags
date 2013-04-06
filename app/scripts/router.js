@@ -60,9 +60,6 @@ function(app, CragSet, Crag, CragOverviewView, Route, RouteStats, CragOverviewSt
                 $('#craglist').html(cragListView.el);
             });
         });
-        
-
-
     }
 
   });

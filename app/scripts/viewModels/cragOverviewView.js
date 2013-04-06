@@ -16,7 +16,9 @@ define([
     spec.manage = true;
 
     spec.serialize = function () {
-        return this.model.toJSON();
+        var templateObject = this.model.toJSON();
+        templateObject.imageURL = this.model.getImageURL();
+        return templateObject;
     };
 
     var CragOverviewView = Backbone.View.extend(spec);
