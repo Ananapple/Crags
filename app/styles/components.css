@@ -1,3 +1,18 @@
+body{
+	color: #111111;
+	background: black;
+	margin: 0;
+	font-family: LaneNarrow;
+}
+
+#main{
+	position: absolute;
+	width: 320px;
+	background: #f0f0f0;
+	left: 50%;
+	margin-left: -160px;
+}
+
 h1{
 	margin: 0;
 	font-size: 20px;
