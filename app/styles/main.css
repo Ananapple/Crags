@@ -4,13 +4,6 @@
 
 /* Will be compiled down to a single stylesheet with your sass files */
 
-body{
-	color: #111111;
-	background: #f0f0f0;
-	margin: 0;
-	font-family: LaneNarrow;
-}
-
 @font-face {
     font-family: Entypo;
     src: url("../fonts/entypo.woff") format("woff");
