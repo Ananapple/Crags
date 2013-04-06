@@ -4,8 +4,9 @@ define([
     'jquery',
     'lodash',
     'params',
-    'models/crag'
-], function ($, _, params, Crag) {
+    'models/crag',
+    'viewModels/cragView'
+], function ($, _, params, Crag, CragView) {
     "use strict";
 
     var _this = {};
@@ -14,11 +15,21 @@ define([
 
     spec.template = 'crags/cragList';
     spec.manage = true;
+    spec.el = 'ul';
+
+    var addOne = function (crag) {
+        var cragView = CragView.create(crag);
+        this.$el.append(cragView.render().el);
+    };
+
+    spec.render = function () {
+        this.collection.forEach(addOne, this);
+    };
 
     var CragListView = Backbone.View.extend(spec);
 
-    _this.create = function (instance) {
-        return new CragListView({model: instance});
+    _this.create = function (instances) {
+        return new CragListView({collection: instances});
     };
 
     return _this;
