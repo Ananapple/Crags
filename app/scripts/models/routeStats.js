@@ -59,30 +59,33 @@ define([
                 style.bolted[i] = 0;
             }
         }
-        
+        console.log(style.bolted);
+        console.log(style.mixed);
+        console.log(style.trad);
         callback({
             labels : _.union(_.keys(style.mixed), _.keys(style.trad), _.keys(style.bolted)),
             datasets : [
                 {
-                    fillColor : "rgba(220,220,220,0.5)",
-                    strokeColor : "rgba(220,220,220,1)",
-                    pointColor : "rgba(220,220,220,1)",
-                    pointStrokeColor : "#fff",
-                    data : _.toArray(style.mixed)
-                },
-                {
-                    fillColor : "rgba(151,187,205,0.5)",
-                    strokeColor : "rgba(151,187,205,1)",
-                    pointColor : "rgba(151,187,205,1)",
+                    fillColor : "rgba(254,87,161,0.5)",
+                    strokeColor : "rgba(254,87,161,1)",
+                    pointColor : "rgba(254,87,161,1)",
                     pointStrokeColor : "#fff",
                     data : _.toArray(style.bolted)
+
                 },
                 {
-                    fillColor : "rgba(251,117,155,0.5)",
-                    strokeColor : "rgba(181,87,105,1)",
-                    pointColor : "rgba(181,87,105,1)",
+                    fillColor : "rgba(60,163,51,0.5)",
+                    strokeColor : "rgba(60,163,51,1)",
+                    pointColor : "rgba(60,163,51,1)",
                     pointStrokeColor : "#fff",
                     data : _.toArray(style.trad)
+                },
+                {
+                    fillColor : "rgba(117,81,61,0.5)",
+                    strokeColor : "rgba(117,81,61,1)",
+                    pointColor : "rgba(117,81,61,1)",
+                    pointStrokeColor : "#fff",
+                    data : _.toArray(style.mixed)
                 }
             ]
 

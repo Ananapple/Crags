@@ -1,11 +1,47 @@
 #stats{
-	 margin-top: 20px;
+	 margin-top: 10px;
 }
 
 .cragImage{
 	position: relative;
-	top: 0px;
 	margin: 0;
+	margin-top: 60px;
 	width: 100%;
+
 }
 
+#cragInfo{
+	padding: 10px;
+}
+
+
+.statistics{
+	padding: 10px;
+}
+
+.statistics .label p{
+	display: inline-block;
+	width: auto;
+	margin: auto;
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: white;
+}
+
+.statistics .label{
+	width: 60%;
+	margin-left: 20%;
+}
+
+.statistics .label .bolted{
+	background: rgba(254,87,161,1);
+}
+
+.statistics .label .trad{
+	background: rgba(60,163,51,1);	
+}
+
+.statistics .label .mixed{
+	background: rgba(117,81,61,1);
+}
