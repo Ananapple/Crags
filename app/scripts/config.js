@@ -14,7 +14,9 @@ require.config({
     lodash: "../scripts/libs/lodash",
     backbone: "../scripts/libs/backbone",
     handlebars: "../components/handlebars/handlebars",
-    leaflet: "../components/leaflet/dist/leaflet"
+    leaflet: "../components/leaflet/dist/leaflet",
+    async: "../components/async/lib/async",
+    text: "../components/text/text"
   },
 
   shim: {

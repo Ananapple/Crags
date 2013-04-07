@@ -13,7 +13,7 @@ define([
 
     var spec = {};
 
-    spec.model = Crag;
+    spec.model = Crag.getBackboneModel();
 
     spec.url = params('api').crag;
 
