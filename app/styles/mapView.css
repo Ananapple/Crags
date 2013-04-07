@@ -1,0 +1,74 @@
+#map-container{
+	left: 25%;
+	width: 500px;
+}
+
+#map-header{
+	height: 40px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background-color: #222222;
+    color: #fff;
+}
+
+#map-header h1{
+	position: absolute;
+	line-height: 40px;
+}
+
+
+#map {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    bottom: 0;
+    left: 0px;
+}
+
+.right {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: 100%;
+    height: 100%;
+}
+.left-swipe {
+    width: 200px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #f0f0f0;
+
+}
+
+.left-swipe ul{
+	text-decoration: none;
+	margin: 10px;
+	margin-left:-30px;
+}
+
+.left-swipe li{
+	height: 30px;
+}
+
+.left-swipe a{
+	text-decoration: none;
+	color: black;
+}
+
+
+
+.left-swipe h2{
+	margin: 0px;
+	background: #222222;
+	color: white;
+	height: 40px;
+	line-height: 40px;
+}
+
+#filter-crags{
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 90%;
+}
