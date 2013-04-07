@@ -33,5 +33,9 @@ define([
 
     };
 
+    _this.getBackboneModel = function () {
+        return Crag;
+    };
+
     return _this;
 });

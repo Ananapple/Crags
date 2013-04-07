@@ -4,11 +4,14 @@ define([
     'jquery',
     'lodash',
     'params',
-    'models/crag'
-], function ($, _, params, Crag) {
+    'models/crag',
+    'text!../../templates/crags/cragItem.html'
+], function ($, _, params, Crag, cragItemHtml) {
     "use strict";
 
     var _this = {};
+
+    var template = Handlebars.compile(cragItemHtml);
 
     var spec = {};
 
@@ -18,6 +21,11 @@ define([
 
     spec.serialize = function () {
         return this.model.toJSON();
+    };
+
+    spec.zrender = function () {
+        var html = template(this.serialize());
+        this.el = '<li>' + html + '</li>';
     };
 
     var CragView = Backbone.View.extend(spec);

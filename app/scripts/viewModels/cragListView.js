@@ -15,11 +15,17 @@ define([
 
     spec.template = 'crags/cragList';
     spec.manage = true;
-    spec.el = 'ul';
+    spec.tagName = "ul";
 
     var addOne = function (crag) {
         var cragView = CragView.create(crag);
-        this.$el.append(cragView.render().el);
+        cragView.zrender();
+        this.$el.append(cragView.el);
+    };
+
+    spec.initialize = function () {
+        this.collection.bind("reset", _.bind(spec.render, this));
+        this.collection.fetch();
     };
 
     spec.render = function () {
