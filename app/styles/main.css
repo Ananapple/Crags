@@ -2,6 +2,7 @@
 @import "components.css";
 @import "overview.css";
 @import "mapView.css";
+@import "mapViewCragList.css";
 @import "../components/leaflet/dist/leaflet.css";
 
 /* Will be compiled down to a single stylesheet with your sass files */
