@@ -59,9 +59,7 @@ define([
                 style.bolted[i] = 0;
             }
         }
-        console.log(style.bolted);
-        console.log(style.mixed);
-        console.log(style.trad);
+        
         callback({
             labels : _.union(_.keys(style.mixed), _.keys(style.trad), _.keys(style.bolted)),
             datasets : [

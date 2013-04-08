@@ -3,13 +3,14 @@
 @import "overview.css";
 @import "mapView.css";
 @import "mapViewCragList.css";
+@import "toggle-switch.css";
 @import "../components/leaflet/dist/leaflet.css";
 
 /* Will be compiled down to a single stylesheet with your sass files */
 
 @font-face {
-    font-family: Entypo;
-    src: url("../fonts/entypo.woff") format("woff");
+    font-family: Entypo; 
+    src: url("../fonts/entypo.ttf") format("truetype");
 }
 
 @font-face {

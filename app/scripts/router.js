@@ -53,10 +53,22 @@ function(app, CragSet, Crag, CragOverviewView, Route, RouteStats, CragOverviewSt
         var cragSet = CragSet.create();
         var mapLayout = MapLayoutView.create();
         var cragListView = CragListView.create(cragSet);
+
         mapLayout.render().then(function () {
             $('#map-container').html(mapLayout.el);
             mapLayout.drawMap();
             $('#craglist').html(cragListView.el);
+            
+
+            $('#show-list').click(function(){
+                $("#map-inner-container").animate({left: '+=80%'}, 300);
+                $("#map-on-touch").css({"z-index" : "7"});
+            });
+
+            $("#map-on-touch").click(function(){
+                $("#map-inner-container").animate({left: '-=80%'}, 300);
+                $("#map-on-touch").css({"z-index" : "-3"});                
+            });
         });
     }
 

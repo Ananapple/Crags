@@ -4,7 +4,13 @@
 	margin-left: -160px;
 	width: 320px;
 	height: 100%;
-	overflow: visible;
+	overflow: hidden;
+}
+
+#map-inner-container{
+	z-index: 5;
+	-webkit-box-shadow: -5px 0px 7px rgba(50, 50, 50, 0.75);
+	box-shadow:         -5px 0px 7px rgba(50, 50, 50, 0.75);
 }
 
 #map-header{
@@ -43,9 +49,10 @@
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	background: rgba(0,0,0,0.7);
+	background: rgba(0,0,0,0.8);
 	height: 40px;
-	z-index: 10000000;
+	z-index: 1000;
+	font-family: Entypo !important;
 }
 
 #map-buttons button{
@@ -56,4 +63,12 @@
 	border-left: 1px solid #333333;
 	height: 100%;
 	color: white;
+}
+
+#map-on-touch{
+	height: 100%;
+	position: absolute;
+	right: 0;
+	width: 20%;
+	z-index: -2;
 }

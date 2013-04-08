@@ -38,5 +38,17 @@ define([
         return new CragListView({collection: instances});
     };
 
+    _this.alphaSort = function(){
+        var sortAZ = function sortAlpha(a,b){  
+            return a.innerHTML.toLowerCase() > b.innerHTML.toLowerCase() ? 1 : -1;  
+        };  
+  
+        $(".AZ").click(function(){
+            alert("oy");
+            $('#cragList li').sort(sortAlpha).appendTo('#cragList ul');
+        });
+    };
+    
+        
     return _this;
 });

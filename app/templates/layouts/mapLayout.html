@@ -2,9 +2,22 @@
     <div class="left-swipe">
         <div>
             <header>
-                <h1>Craglist</h1>
+                <h1>Klatrefelt</h1>
             </header>
             <input type="text" name="filter-crags" id="filter-crags">
+            
+            <div class="listSwitch">
+                <div class="switch candy">
+
+                    <input id="A-Z" name="view" type="radio" checked>
+                    <label class="AZ" for="A-Z" onclick="">A-Å</label>
+
+                    <input id="Avstand" name="view" type="radio"> 
+                    <label class="avstand" for="Avstand" onclick="">Avstand</label>
+                    
+                    <span class="slide-button"></span>
+                </div>  
+            </div>
             <div id="craglist">
                 <!-- cragListView -->
             </div>
@@ -12,14 +25,15 @@
     </div>
     <div class="right" id="map-inner-container">
         <header id="map-header">
-            <h1>Map</h1>
+            <h1>Kart</h1>
         </header>
         <div id="map"></div>
         <div id="map-buttons">
-            <button id="show-list">list</button>
-            <button id="find-me">find me</button>
-            <button id="find-closest-crag">closest</button>
-            <button id="set-map-type">map</button>
+            <button id="show-list">&#9776;</button>
+            <button id="find-me">&#127919;</button>
+            <button id="find-closest-crag"></button>
+            <button id="set-map-type">&#59175;</button>
         </div>
     </div>
+    <div id="map-on-touch"></div>
 </section>
