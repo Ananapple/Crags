@@ -1,22 +1,27 @@
 <section id="mapview-container">
     <div class="left-swipe">
         <div>
+
             <header>
                 <h1>Klatrefelt</h1>
             </header>
-            <input type="text" name="filter-crags" id="filter-crags">
-            
-            <div class="listSwitch">
-                <div class="switch candy">
 
-                    <input id="A-Z" name="view" type="radio" checked>
-                    <label class="AZ" for="A-Z" onclick="">A-Å</label>
+            <div class="top-buttons">
+                <input type="text" name="filter-crags" id="filter-crags" value="Søk">
+                
+                <div class="listSwitch">
+                        <label class="checkbox switch toggle candy blue" onclick="">
+                                <input id="view" type="checkbox" />
+                                <p>
+                                    <span class="AZ" id="AZ">A-Å</span>
+                                    <span class="avstand" id="avstand">Avstand</span>
+                                </p>
+                                <a class="slide-button"></a>
+                        </label>
 
-                    <input id="Avstand" name="view" type="radio"> 
-                    <label class="avstand" for="Avstand" onclick="">Avstand</label>
-                    
-                    <span class="slide-button"></span>
-                </div>  
+                    </div>  
+                </div>
+
             </div>
             <div id="craglist">
                 <!-- cragListView -->
@@ -31,7 +36,7 @@
         <div id="map-buttons">
             <button id="show-list">&#9776;</button>
             <button id="find-me">&#127919;</button>
-            <button id="find-closest-crag"></button>
+            <button id="find-closest-crag"></button>
             <button id="set-map-type">&#59175;</button>
         </div>
     </div>

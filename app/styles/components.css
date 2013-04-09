@@ -4,6 +4,8 @@ body{
 	background-repeat: repeat;
 	margin: 0;
 	font-family: LaneNarrow;
+	min-height: 480px;
+
 }
 
 #main{

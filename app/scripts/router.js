@@ -61,13 +61,15 @@ function(app, CragSet, Crag, CragOverviewView, Route, RouteStats, CragOverviewSt
             
 
             $('#show-list').click(function(){
-                $("#map-inner-container").animate({left: '+=80%'}, 300);
+                $("#map-inner-container").animate({left: '+=80%'}, 200);
+                $(".top-buttons").animate({top: '+=200px'}, 200);
                 $("#map-on-touch").css({"z-index" : "7"});
             });
 
             $("#map-on-touch").click(function(){
-                $("#map-inner-container").animate({left: '-=80%'}, 300);
-                $("#map-on-touch").css({"z-index" : "-3"});                
+                $("#map-inner-container").animate({left: '-=80%'}, 200);
+                $(".top-buttons").animate({top: '-=200px'}, 200);
+                $("#map-on-touch").css({"z-index" : "-3"}); 
             });
         });
     }
